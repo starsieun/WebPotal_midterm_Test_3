@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.sql.SQLException;
 import java.util.Random;
@@ -22,8 +23,11 @@ public class UserDaoTest {
     public void setup(){
     /*    userDao = new DaoFactory().getUserDao();*/
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(DaoFactory.class);
+        /*ApplicationContext context = new AnnotationConfigApplicationContext(DaoFactory.class);
         userDao = context.getBean("userDao",UserDao.class);
+    */
+        ApplicationContext context = new GenericXmlApplicationContext("daoFactory.xml");
+        userDao = context.getBean("userDao", UserDao.class);
     }
     @Test
     public void get() throws ClassNotFoundException, SQLException {
@@ -33,7 +37,6 @@ public class UserDaoTest {
         String name = "이시은";
         String password = "1111";
 
-        UserDao userDao = new DaoFactory().userDao();
         User user = userDao.get(id);
         assertThat(id, is(user.getId()));
         assertThat(name, is(user.getName()));
@@ -53,7 +56,6 @@ public class UserDaoTest {
         user.setName(name);
         user.setPassword(password);
 
-        UserDao userDao = new DaoFactory().userDao();
         userDao.add(user);
         User addedUser = userDao.get(id);
 

@@ -9,11 +9,54 @@ import java.sql.SQLException;
  */
 public class JejuConnectionMaker implements ConnectionMaker {
 
+    private String url;
+    private String id;
+    private String password;
+    private String className;
+
+
+
+
+
     @Override
     public Connection getConnection() throws ClassNotFoundException, SQLException {
 
-        Class.forName("com.mysql.jdbc.Driver");
-        return DriverManager.getConnection("jdbc:mysql://117.17.102.106/sieun1","root","1234");
+        Class.forName(className);
+        return DriverManager.getConnection(url,id,password);
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
     }
 
 }

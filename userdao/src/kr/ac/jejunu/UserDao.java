@@ -66,6 +66,10 @@ public class UserDao {
 
     }
 
+    public void setConnectionMaker(ConnectionMaker connectionMaker) {
+        this.connectionMaker = connectionMaker;
+    }
+
     /*public Connection getConnection() throws ClassNotFoundException, SQLException{
 
           Class.forName("com.mysql.jdbc.Driver");

@@ -14,6 +14,7 @@ public class DaoFactory {
         return new UserDao(ConnectionMaker());
     }
 
+    @Bean
     private JejuConnectionMaker ConnectionMaker() {
         return new JejuConnectionMaker();
     }
