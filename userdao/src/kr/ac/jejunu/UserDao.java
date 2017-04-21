@@ -1,8 +1,6 @@
 package kr.ac.jejunu;
 
-import javax.xml.transform.Result;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.*;
 
@@ -13,12 +11,21 @@ import java.sql.*;
 
 //런타임을 실행할때 만들어진다.
 
-public abstract class UserDao {
+public class UserDao {
+
+    private ConnectionMaker connectionMaker;
+
+
+    public UserDao(ConnectionMaker connectionMaker){
+        this.connectionMaker = connectionMaker;
+    }
+
+
 
 
     public User get(String id) throws ClassNotFoundException, SQLException {
 
-        Connection connection = getConnection();
+        Connection connection = connectionMaker.getConnection();
 
         PreparedStatement preparedStatement = connection.prepareStatement("select * from user where id = ?");
         preparedStatement.setString(1, id);
@@ -44,7 +51,7 @@ public abstract class UserDao {
     public void add(User user) throws ClassNotFoundException, SQLException {
 
 
-        Connection connection = getConnection();
+        Connection connection = connectionMaker.getConnection();
 
 
         PreparedStatement preparedStatement = connection.prepareStatement("insert into user(id, name, password) VALUE (?, ?, ?)");
@@ -61,8 +68,11 @@ public abstract class UserDao {
 
     }
 
-    public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
-       /* Class.forName("com.mysql.jdbc.Driver");
-        return DriverManager.getConnection("jdbc:mysql://117.17.102.106/sieun1","root","1234");*/
+    /*public Connection getConnection() throws ClassNotFoundException, SQLException{
+
+          Class.forName("com.mysql.jdbc.Driver");
+        return DriverManager.getConnection("jdbc:mysql://117.17.102.106/sieun1","root","1234");
+    }*/
+
 
 }

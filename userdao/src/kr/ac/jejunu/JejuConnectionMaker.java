@@ -7,10 +7,13 @@ import java.sql.SQLException;
 /**
  * Created by sieun on 2017. 4. 21..
  */
-public class HallaUserDao extends UserDao {
+public class JejuConnectionMaker implements ConnectionMaker {
+
     @Override
     public Connection getConnection() throws ClassNotFoundException, SQLException {
-          Class.forName("com.mysql.jdbc.Driver");
+
+        Class.forName("com.mysql.jdbc.Driver");
         return DriverManager.getConnection("jdbc:mysql://117.17.102.106/sieun1","root","1234");
     }
+
 }

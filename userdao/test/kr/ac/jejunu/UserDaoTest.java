@@ -20,7 +20,7 @@ public class UserDaoTest {
         String name = "이시은";
         String password = "1111";
 
-        UserDao userDao = new JejuUserDao();
+        UserDao userDao = new UserDao(new JejuConnectionMaker());
         User user = userDao.get(id);
         assertThat(id, is(user.getId()));
         assertThat(name, is(user.getName()));
@@ -40,7 +40,7 @@ public class UserDaoTest {
         user.setName(name);
         user.setPassword(password);
 
-        UserDao userDao = new JejuUserDao();
+        UserDao userDao = new UserDao(new JejuConnectionMaker());
         userDao.add(user);
         User addedUser = userDao.get(id);
 
@@ -49,45 +49,6 @@ public class UserDaoTest {
         assertThat(password,is(addedUser.getPassword()));
 
     }
-
-    @Test
-    public void getHalla() throws ClassNotFoundException, SQLException {
-
-        String id = "1";
-        String name = "이시은";
-        String password = "1111";
-
-        UserDao userDao = new HallaUserDao();
-        User user = userDao.get(id);
-        assertThat(id, is(user.getId()));
-        assertThat(name, is(user.getName()));
-        assertThat(password, is(user.getPassword()));
-
-    }
-
-    @Test
-    public void addHalla() throws SQLException, ClassNotFoundException {
-
-        User user = new User();
-        String id = String.valueOf(new Random().nextInt());
-        String name = "시봉이";
-        String password = "1234";
-
-        user.setId(id);
-        user.setName(name);
-        user.setPassword(password);
-
-        UserDao userDao = new HallaUserDao();
-        userDao.add(user);
-        User addedUser = userDao.get(id);
-
-        assertThat(id,is(addedUser.getId()));
-        assertThat(name,is(addedUser.getName()));
-        assertThat(password,is(addedUser.getPassword()));
-
-    }
-
-
 
 
 
