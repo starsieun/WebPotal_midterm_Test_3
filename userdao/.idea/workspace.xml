@@ -106,25 +106,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kr/ac/jejunu/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="309">
+              <caret line="66" column="5" lean-forward="false" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1492735274000" expanded="true" signature="641:672" ph="select * fro... user" />
-                <marker date="1492735274000" expanded="true" signature="1554:1606" ph="insert into user... " />
+                <marker date="1492735850000" expanded="true" signature="467:498" ph="select * fro... user" />
+                <marker date="1492735850000" expanded="true" signature="1155:1207" ph="insert into user... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserDaoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/kr/ac/jejunu/UserDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -258,6 +258,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -695,14 +696,11 @@
       <workItem from="1490246154801" duration="2223000" />
       <workItem from="1490267850390" duration="1857000" />
       <workItem from="1490334202522" duration="2718000" />
-      <workItem from="1492734185087" duration="1095000" />
+      <workItem from="1492734185087" duration="1626000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDaoTest - 2017.03.15 at 21h 16m 09s.xml">
-      <configuration name="UserDaoTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserDaoTest - 2017.03.24 at 15h 16m 08s.xml">
       <configuration name="UserDaoTest" configurationId="JUnit" />
     </history-entry>
@@ -730,9 +728,12 @@
     <history-entry file="UserDaoTest - 2017.04.21 at 09h 41m 17s.xml">
       <configuration name="UserDaoTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserDaoTest - 2017.04.21 at 09h 50m 58s.xml">
+      <configuration name="UserDaoTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17358000" />
+    <option name="totallyTimeSpent" value="17889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="723" extended-state="6" />
@@ -909,8 +910,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1492735274000" expanded="true" signature="641:672" ph="select * fro... user" />
-            <marker date="1492735274000" expanded="true" signature="1554:1606" ph="insert into user... " />
+            <marker date="1492735850000" expanded="true" signature="467:498" ph="select * fro... user" />
+            <marker date="1492735850000" expanded="true" signature="1155:1207" ph="insert into user... " />
           </folding>
         </state>
       </provider>
@@ -1145,8 +1146,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1492735274000" expanded="true" signature="641:672" ph="select * fro... user" />
-            <marker date="1492735274000" expanded="true" signature="1554:1606" ph="insert into user... " />
+            <marker date="1492735850000" expanded="true" signature="467:498" ph="select * fro... user" />
+            <marker date="1492735850000" expanded="true" signature="1155:1207" ph="insert into user... " />
           </folding>
         </state>
       </provider>
@@ -1257,24 +1258,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/kr/ac/jejunu/UserDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/kr/ac/jejunu/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="309">
+          <caret line="66" column="5" lean-forward="false" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1492735850000" expanded="true" signature="467:498" ph="select * fro... user" />
+            <marker date="1492735850000" expanded="true" signature="1155:1207" ph="insert into user... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kr/ac/jejunu/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/test/kr/ac/jejunu/UserDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1492735274000" expanded="true" signature="641:672" ph="select * fro... user" />
-            <marker date="1492735274000" expanded="true" signature="1554:1606" ph="insert into user... " />
           </folding>
         </state>
       </provider>
