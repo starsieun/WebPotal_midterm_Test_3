@@ -13,7 +13,7 @@ import java.sql.*;
 
 //런타임을 실행할때 만들어진다.
 
-public class UserDao {
+public abstract class UserDao {
 
 
     public User get(String id) throws ClassNotFoundException, SQLException {
@@ -61,8 +61,8 @@ public class UserDao {
 
     }
 
-    private Connection getConnection() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-        return DriverManager.getConnection("jdbc:mysql://117.17.102.106/sieun1","root","1234");
-    }
+    public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
+       /* Class.forName("com.mysql.jdbc.Driver");
+        return DriverManager.getConnection("jdbc:mysql://117.17.102.106/sieun1","root","1234");*/
+
 }
