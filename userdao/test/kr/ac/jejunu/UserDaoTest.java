@@ -1,6 +1,9 @@
 package kr.ac.jejunu;
 
+import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.SQLException;
 import java.util.Random;
@@ -13,14 +16,24 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 public class UserDaoTest {
 
+    private UserDao userDao;
+
+    @Before
+    public void setup(){
+    /*    userDao = new DaoFactory().getUserDao();*/
+
+        ApplicationContext context = new AnnotationConfigApplicationContext(DaoFactory.class);
+        userDao = context.getBean("userDao",UserDao.class);
+    }
     @Test
     public void get() throws ClassNotFoundException, SQLException {
+
 
         String id = "1";
         String name = "이시은";
         String password = "1111";
 
-        UserDao userDao = new UserDao(new JejuConnectionMaker());
+        UserDao userDao = new DaoFactory().userDao();
         User user = userDao.get(id);
         assertThat(id, is(user.getId()));
         assertThat(name, is(user.getName()));
@@ -40,7 +53,7 @@ public class UserDaoTest {
         user.setName(name);
         user.setPassword(password);
 
-        UserDao userDao = new UserDao(new JejuConnectionMaker());
+        UserDao userDao = new DaoFactory().userDao();
         userDao.add(user);
         User addedUser = userDao.get(id);
 

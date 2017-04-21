@@ -21,8 +21,6 @@ public class UserDao {
     }
 
 
-
-
     public User get(String id) throws ClassNotFoundException, SQLException {
 
         Connection connection = connectionMaker.getConnection();
